@@ -1,0 +1,350 @@
+:root {
+  --primary-color: #ff788d;
+  --secondary-color: #fff9fa;
+  --primary-hover-color: #e5533d;
+  --background-color: #f8f8f8;
+  --white: #ffffff;
+  --border-color: #e0e0e0;
+  --pink-border-color: #ff6b82;
+  --text-color: #333333;
+  --muted-text-color: #999999;
+  --font-family: Arial, sans-serif;
+  --border-radius: 8px;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+input[type="radio"] {
+  height: 1em;
+  aspect-ratio: 1;
+  border: calc(1em / 8) solid #939393;
+  padding: calc(1em / 8);
+  background: radial-gradient(farthest-side, var(--primary-color) 94%, #0000)
+    50%/0 0 no-repeat content-box;
+  border-radius: 50%;
+  outline-offset: calc(1em / 10);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  font-size: inherit;
+  transition: 0.3s;
+}
+
+input[type="radio"]:checked {
+  border-color: var(--primary-color);
+  background-size: 100% 100%;
+}
+
+input[type="radio"]:disabled {
+  background: linear-gradient(#939393 0 0) 50%/100% 20% no-repeat content-box;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 2px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  height: 40px;
+}
+
+button:hover {
+  background-color: var(--primary-hover-color);
+}
+
+footer {
+  width: 342px;
+  margin: 10px auto;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.card {
+  background-color: var(--white);
+  padding: 20px;
+  width: 442px;
+}
+
+header h1 {
+  color: var(--primary-color);
+  text-align: center;
+  margin-top: 6px;
+}
+
+.inner-card {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  width: 342px;
+  height: 74px;
+  margin: 17px auto;
+  cursor: pointer;
+}
+
+.expanded-inner-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid var(--pink-border-color);
+  border-radius: var(--border-radius);
+  background-color: var(--secondary-color);
+  width: calc(342px - 2 * 10px);
+  height: 172px;
+  margin: 17px auto;
+  padding: 0px 10px;
+  cursor: pointer;
+}
+
+.discount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 74px;
+  width: 70px;
+  background-color: var(--primary-color);
+  border-radius: var(--border-radius) 0px 0px var(--border-radius);
+}
+
+.discount h3 {
+  color: var(--white);
+  font-size: 18px;
+  margin: 0;
+}
+
+.offer-details {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.offer-details > .text {
+  margin-left: 15px;
+}
+
+.expanded-offer-details-row1 > .text {
+  margin-left: 15px;
+}
+
+.expanded-offer-details-row1 > .text2 {
+  margin-left: 4px;
+}
+
+.text {
+  margin-left: 5px;
+}
+
+.offer-details {
+  margin-left: 10px;
+}
+
+.offer-details p {
+  margin: 4px 0px;
+  font-size: 14px;
+  color: var(--text-color);
+}
+
+.expanded-offer-details {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.expanded-offer-details-row1 {
+  display: flex;
+  margin: 4px 0px;
+}
+
+.custom-table {
+  border-collapse: collapse;
+}
+
+.custom-table head {
+  margin-bottom: 10px;
+}
+
+.custom-table th,
+.custom-table td {
+  padding: 5px;
+  text-align: left;
+  border: 1px solid var(--table-border-color);
+  font-size: 12px;
+}
+
+.custom-table th {
+  background-color: var(--table-header-background);
+  color: var(--table-header-color);
+  font-weight: 300;
+}
+
+.srnotd {
+  padding-top: 16px !important;
+  padding-left: 12px !important;
+  font-size: 10px !important;
+}
+
+.custom-select {
+  position: relative;
+  font-family: Arial;
+}
+
+.custom-select select {
+  display: none;
+}
+
+.select-selected {
+  width: 62px;
+  background-color: white;
+}
+
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 10px;
+  right: 8px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #000000 transparent transparent transparent;
+}
+
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #000000 transparent;
+  top: 7px;
+}
+
+.select-items div,
+.select-selected {
+  color: #000000;
+  padding: 5px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  user-select: none;
+}
+
+.select-items {
+  position: absolute;
+  background-color: white;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.expanded-offer-details {
+  margin-left: 5px;
+}
+
+.expanded-offer-details p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text-color);
+}
+
+.highlight2 {
+  color: var(--primary-color) !important;
+  font-weight: 700;
+  font-size: 14px;
+  margin-left: 10px !important;
+}
+
+.most-popular {
+  font-weight: 700;
+  color: var(--primary-color);
+  font-size: 14px;
+  margin-left: 35px;
+}
+
+.delivery {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -15px;
+}
+
+.delivery h6 {
+  color: var(--primary-color);
+  margin: 0;
+  font-size: 16px;
+}
+
+.powered-by {
+  margin: 0;
+  text-align: center;
+  color: var(--muted-text-color);
+  margin-top: 7px;
+  font-size: 14px;
+}
+
+.pumper {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.hide {
+  display: none !important;
+}
+
+.highlight {
+  background-color: var(--primary-color);
+  width: fit-content;
+  padding: 1px 4px;
+  color: var(--white) !important;
+  margin-bottom: 5px !important;
+  border-radius: 2px;
+}
+
+.cancelled {
+  color: gray !important;
+  font-size: 12px !important;
+  text-decoration: line-through;
+}
